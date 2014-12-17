@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Stemmer")]
+[assembly: AssemblyTitle("Annytab Stemmer")]
 [assembly: AssemblyDescription("Stemmers for different languages")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("A Name Not Yet Taken AB")]
-[assembly: AssemblyProduct("Stemmer")]
+[assembly: AssemblyProduct("AnnytabStemmer")]
 [assembly: AssemblyCopyright("Copyright © 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
