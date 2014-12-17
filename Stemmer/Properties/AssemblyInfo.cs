@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Annytab Stemmer")]
-[assembly: AssemblyDescription("Stemmers for different languages")]
+[assembly: AssemblyDescription("Stemmers for different languages.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("A Name Not Yet Taken AB")]
 [assembly: AssemblyProduct("AnnytabStemmer")]
