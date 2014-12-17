@@ -106,6 +106,9 @@ csx
 # Windows Store app package directory
 AppPackages/
 
+# Create NuGetPackage
+Stemmer/_CreateNewNuGetPackage/
+
 # Others
 sql/
 *.Cache

@@ -11,7 +11,6 @@ namespace Annytab
     /// </summary>
     public class DefaultStemmer : Stemmer
     {
-
         #region Constructors
 
         /// <summary>
