@@ -107,7 +107,7 @@ csx
 AppPackages/
 
 # Create NuGetPackage
-Stemmer/_CreateNewNuGetPackage/*.*
+Stemmer/_CreateNewNuGetPackage/
 
 # Others
 sql/

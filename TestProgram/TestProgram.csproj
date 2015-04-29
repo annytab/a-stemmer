@@ -56,8 +56,20 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="TestDanishStemmer.cs" />
+    <Compile Include="TestDefaultStemmer.cs" />
+    <Compile Include="TestDutchStemmer.cs" />
+    <Compile Include="TestEnglishStemmer.cs" />
+    <Compile Include="TestFinnishStemmer.cs" />
+    <Compile Include="TestFrenchStemmer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestStemmers.cs" />
+    <Compile Include="TestGermanStemmer.cs" />
+    <Compile Include="TestItalianStemmer.cs" />
+    <Compile Include="TestNorwegianStemmer.cs" />
+    <Compile Include="TestPortugueseStemmer.cs" />
+    <Compile Include="TestRomanianStemmer.cs" />
+    <Compile Include="TestSpanishStemmer.cs" />
+    <Compile Include="TestSwedishStemmer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stemmer\Stemmer.csproj">

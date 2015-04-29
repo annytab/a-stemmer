@@ -58,8 +58,18 @@
   <ItemGroup>
     <Compile Include="DefaultStemmer.cs" />
     <Compile Include="EnglishStemmer.cs" />
+    <Compile Include="FinnishStemmer.cs" />
+    <Compile Include="DutchStemmer.cs" />
+    <Compile Include="ItalianStemmer.cs" />
+    <Compile Include="PortugueseStemmer.cs" />
+    <Compile Include="RomanianStemmer.cs" />
+    <Compile Include="SpanishStemmer.cs" />
+    <Compile Include="FrenchStemmer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stemmer.cs" />
+    <Compile Include="NorwegianStemmer.cs" />
+    <Compile Include="DanishStemmer.cs" />
+    <Compile Include="GermanStemmer.cs" />
     <Compile Include="SwedishStemmer.cs" />
   </ItemGroup>
   <ItemGroup>

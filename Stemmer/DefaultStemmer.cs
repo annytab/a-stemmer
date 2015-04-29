@@ -17,7 +17,10 @@ namespace Annytab
         /// Create a new default stemmer with default properties
         /// </summary>
         public DefaultStemmer()
+            : base()
         {
+            // Set values for instance variables
+            this.vowels = new char[0];
 
         } // End of the constructor
 
@@ -30,7 +33,7 @@ namespace Annytab
         /// </summary>
         /// <param name="words">An array of words</param>
         /// <returns>An array of steam words</returns>
-        public string[] GetSteamWords(string[] words)
+        public override string[] GetSteamWords(string[] words)
         {
             return words;
 
@@ -41,7 +44,7 @@ namespace Annytab
         /// </summary>
         /// <param name="word">The word to strip</param>
         /// <returns>The stripped word</returns>
-        public string GetSteamWord(string word)
+        public override string GetSteamWord(string word)
         {
             return word;
 
