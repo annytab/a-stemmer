@@ -1,6 +1,5 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Annytab;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Annytab.Stemmer;
 
 namespace TestProgram
 {

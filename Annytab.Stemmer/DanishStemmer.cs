@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace Annytab
+namespace Annytab.Stemmer
 {
     /// <summary>
-    /// This class is used to strip swedish words to the steam
-    /// This class is based on the swedish stemming algorithm from Snowball
-    /// http://snowball.tartarus.org/algorithms/swedish/stemmer.html
+    /// This class is used to strip danish words to the steam
+    /// This class is based on the danish stemming algorithm from Snowball
+    /// http://snowball.tartarus.org/algorithms/danish/stemmer.html
     /// </summary>
-    public class SwedishStemmer : Stemmer
+    public class DanishStemmer : Stemmer
     {
         #region Variables
 
@@ -22,19 +21,19 @@ namespace Annytab
         #region Constructor
 
         /// <summary>
-        /// Create a new swedish stemmer with default properties
+        /// Create a new danish stemmer with default properties
         /// </summary>
-        public SwedishStemmer()
+        public DanishStemmer()
             : base()
         {
             // Set values for instance variables
-            this.vowels = new char[] { 'a', 'e', 'i', 'o', 'u', 'y', 'ä', 'å', 'ö' };
-            this.valid_s_endings = new char[] { 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 't', 'v', 'y' };
-            this.endingsStep1 = new string[] {"heterna", "hetens", "arens", "andes", "andet", "ornas", "ernas", "arnas", "heter",
-                "heten", "anden", "erns", "ades", "aren", "aste", "arne", "ande", "orna", "erna", "arna", "ast", "het", "ens", "ern", "are", "ade",
-                "at", "es", "as", "or", "er", "ar", "en", "ad", "e", "a"};
-            this.endingsStep2 = new string[] { "dd", "gd", "nn", "dt", "gt", "kt", "tt" };
-            this.endingsStep3 = new string[] { "lig", "els", "ig" };
+            this.vowels = new char[] { 'a', 'e', 'i', 'o', 'u', 'y', 'æ', 'å', 'ø' };
+            this.valid_s_endings = new char[] { 'a', 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 't', 'v', 'y', 'z', 'å' };
+            this.endingsStep1 = new string[] { "erendes", "hedens", "erende", "erede", "ethed", "heden", "erens", "heder", "endes", "ernes", "erets", 
+                "eret", "eren", "erer", "ered", "ende", "heds", "erne", "eres", "enes", "ens", "ets", "ere", "hed", "ene", "ers", "et", "er", "en", 
+                "es", "e" };  
+            this.endingsStep2 = new string[] { "gd", "dt", "gt", "kt" };
+            this.endingsStep3 = new string[] { "elig", "els", "lig", "ig" };
 
         } // End of the constructor
 
@@ -70,7 +69,7 @@ namespace Annytab
         /// <returns>The stripped word</returns>
         public override string GetSteamWord(string word)
         {
-            // Turn the word into lower case
+            // Turn the word into lower case letters
             word = word.ToLowerInvariant();
 
             // Get a char array of each letter in the word
@@ -111,7 +110,7 @@ namespace Annytab
                 }
             }
 
-            // Delete a s in the end if the s is preceded by a valid s-ending, 
+            // Delete a s in the end if the s is preceded by a valid s-ending
             if (continue_step_1 == true && part2.EndsWith("s") == true)
             {
                 // Create a full string of part1 and part2
@@ -129,7 +128,7 @@ namespace Annytab
                         part2 = part2.Remove(part2.Length - 1);
                         break;
                     }
-                }   
+                }
             }
             // **********************************************
 
@@ -150,23 +149,52 @@ namespace Annytab
             // **********************************************
             // Step 3
             // **********************************************
-            if (part2.EndsWith("fullt") || part2.EndsWith("löst"))
+            if (part2.EndsWith("igst"))
             {
-                // Delete the last letter in part2
-                part2 = part2.Remove(part2.Length - 1);
+                // Delete the last two letter in part2
+                part2 = part2.Remove(part2.Length - 2);
             }
-            else
+
+            bool repeatStep2 = false;
+            for (int i = 0; i < this.endingsStep3.Length; i++)
             {
-                for (int i = 0; i < this.endingsStep3.Length; i++)
+                if (part2.EndsWith(this.endingsStep3[i]))
                 {
-                    if (part2.EndsWith(this.endingsStep3[i]))
+                    // Delete the ending
+                    part2 = part2.Remove(part2.Length - this.endingsStep3[i].Length);
+                    repeatStep2 = true;
+                    break;
+                }
+            }
+
+            if(repeatStep2 == true)
+            {
+                for (int i = 0; i < this.endingsStep2.Length; i++)
+                {
+                    if (part2.EndsWith(this.endingsStep2[i]))
                     {
                         // Delete the ending
-                        part2 = part2.Remove(part2.Length - this.endingsStep3[i].Length);
+                        part2 = part2.Remove(part2.Length - 1);
                         break;
                     }
                 }
             }
+            else if (part2.EndsWith("løst"))
+            {
+                // Delete the last letter in part2
+                part2 = part2.Remove(part2.Length - 1);
+            }
+            // **********************************************
+            // Step 4
+            // **********************************************
+            // If the word ends with double consonant in R1, remove one of the consonants.
+            word = part1 + part2;
+            if (word.Length > 1 && part2.Length > 0 && word[word.Length - 2] == word[word.Length - 1] 
+                && IsVowel(part2[part2.Length - 1]) == false)
+            {
+                part2 = part2.Remove(part2.Length - 1);
+            }
+            // **********************************************
 
             // Return the stripped word
             return part1 + part2;
@@ -207,7 +235,7 @@ namespace Annytab
             // Return the int array
             return r1;
 
-        } // End of the calculateR1 method
+        } // End of the calculateR1R2 method
 
         #endregion
 

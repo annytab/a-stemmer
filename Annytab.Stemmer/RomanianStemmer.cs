@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace Annytab
+namespace Annytab.Stemmer
 {
     /// <summary>
     /// This class is used to strip romanian words to the steam

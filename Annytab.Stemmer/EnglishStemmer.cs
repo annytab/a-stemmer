@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Text;
 
-namespace Annytab
+namespace Annytab.Stemmer
 {
     /// <summary>
     /// This class is used to strip english words to the steam

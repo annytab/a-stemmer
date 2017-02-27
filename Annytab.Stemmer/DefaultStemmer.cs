@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Annytab
+﻿namespace Annytab.Stemmer
 {
     /// <summary>
     /// This class represent the default stemmer, it does not do any stemming at all. 
@@ -55,4 +50,3 @@ namespace Annytab
     } // End of the class
 
 } // End of the namespace
-

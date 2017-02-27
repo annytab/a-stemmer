@@ -1,6 +1,5 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Annytab;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Annytab.Stemmer;
 
 namespace TestProgram
 {
@@ -10950,6 +10949,6 @@ namespace TestProgram
 
         } // End of the ExtensiveTest method
 
-    } /// End of the class
-      /// 
+    } // End of the class
+
 } // End of the namespace

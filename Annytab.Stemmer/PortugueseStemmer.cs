@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace Annytab
+namespace Annytab.Stemmer
 {
     /// <summary>
     /// This class is used to strip portuguese words to the steam
@@ -14,7 +13,6 @@ namespace Annytab
 
         private string[] endingsStep1;
         private string[] endingsStep2;
-        private string[] endingsStep3;
         private string[] endingsStep4;
 
         #endregion
