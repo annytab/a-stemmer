@@ -7,7 +7,7 @@ namespace TestProgram
     public class TestGermanStemmer
     {
         [TestMethod]
-        public void ExtensiveTest()
+        public void ExtensiveTestGermanStemmer()
         {
             // Create an array with words to test
             string[] words = new string[] { "a", "aa", "aalglatten", "aargau", "aargauer", "aasen", "aasgeruch", "aashöllen", "ab", "abaddon", 
@@ -8638,7 +8638,7 @@ namespace TestProgram
                 "zynik", "zynisch", "zypern", "zypress" };
 
             // Create a german stemmer
-            Stemmer stemmer = new GermanStemmer();
+            IStemmer stemmer = new GermanStemmer();
 
             // Test the stemmer
             for (int i = 0; i < words.Length; i++)

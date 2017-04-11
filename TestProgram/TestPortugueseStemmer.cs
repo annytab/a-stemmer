@@ -7,7 +7,7 @@ namespace TestProgram
     public class TestPortugueseStemmer
     {
         [TestMethod]
-        public void ExtensiveTest()
+        public void ExtensiveTestPortugueseStemmer()
         {
             // Create an array with words to test
             string[] words = new string[] { "a", "á", "à", "ã", "aacho", "aacute", "abacaxi", "abade", "abaeté", "abafar", "abafaram", "abaixa", "abaixe", 
@@ -6135,7 +6135,7 @@ namespace TestProgram
                 "zon", "zon", "zoneament", "zonz", "zoobor", "zoológ", "zoomp", "zul", "zumb", "zumb" };
 
             // Create a portuguese stemmer
-            Stemmer stemmer = new PortugueseStemmer();
+            IStemmer stemmer = new PortugueseStemmer();
 
             // Test the stemmer
             for (int i = 0; i < words.Length; i++)

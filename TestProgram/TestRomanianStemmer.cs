@@ -7,7 +7,7 @@ namespace TestProgram
     public class TestRomanianStemmer
     {
         [TestMethod]
-        public void ExtensiveTest()
+        public void ExtensiveTestRomanianStemmer()
         {
             // Create an array with words to test
             string[] words = new string[] { "a", "ab", "abajur", "abajurul", "abandon", "abandoneze", "abat", "abate", "abatere", "abateri", "abator", "abătut", 
@@ -4335,7 +4335,7 @@ namespace TestProgram
                 "zvîrcol", "zvîrcolir", "zvîrl", "zvîrlînd", "zvon", "zvonur", "zvonur" };
 
             // Create a romanian stemmer
-            Stemmer stemmer = new RomanianStemmer();
+            IStemmer stemmer = new RomanianStemmer();
 
             // Test the stemmer
             for (int i = 0; i < words.Length; i++)

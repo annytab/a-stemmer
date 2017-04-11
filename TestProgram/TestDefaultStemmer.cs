@@ -7,7 +7,7 @@ namespace TestProgram
     public class TestDefaultStemmer
     {
         [TestMethod]
-        public void ExtensiveTest()
+        public void ExtensiveTestDefaultStemmer()
         {
             // Create an array with words to test
             string[] words = new string[] { "consign", "consigned", "consigning", "consignment", "consist", "consisted", "consistency", "consistent", "consistently", 
@@ -26,7 +26,7 @@ namespace TestProgram
                 "knees", "knell", "knelt", "templates", "cry", "Sky", "absolutely" };
 
             // Create a default stemmer
-            Stemmer stemmer = new DefaultStemmer();
+            IStemmer stemmer = new DefaultStemmer();
 
             // Test the stemmer
             for (int i = 0; i < words.Length; i++)

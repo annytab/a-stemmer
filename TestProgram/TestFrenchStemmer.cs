@@ -7,7 +7,7 @@ namespace TestProgram
     public class TestFrenchStemmer
     {
         [TestMethod]
-        public void ExtensiveTest()
+        public void ExtensiveTestFrenchStemmer()
         {
             // Create an array with words to test
             string[] words = new string[] { "a", "à", "abailard", "abaissait", "abaissant", "abaisse", "abaissé", "abaissement", "abaissent", 
@@ -4689,7 +4689,7 @@ namespace TestProgram
                 "zoroastr", "zurl" };
 
             // Create a french stemmer
-            Stemmer stemmer = new FrenchStemmer();
+            IStemmer stemmer = new FrenchStemmer();
 
             // Test the stemmer
             for (int i = 0; i < words.Length; i++)

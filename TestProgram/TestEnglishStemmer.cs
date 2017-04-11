@@ -7,7 +7,7 @@ namespace TestProgram
     public class TestEnglishStemmer
     {
         [TestMethod]
-        public void ExtensiveTest()
+        public void ExtensiveTestEnglishStemmer()
         {
             // Create an array with words to test
             string[] words = new string[] { "'", "''", "'a", "'s", "'aa", "'as", "'''", "'a'", "'s'", "'aa'", "'as", "a", "a'", "a''", "aa'", "aback", "abandon", 
@@ -5592,7 +5592,7 @@ namespace TestProgram
                 "zoolog", "zoophyt", "zoophyt", "zoophyt", "zorillo", "zorillo", "zossimov", "zu" };
 
             // Create a english stemmer
-            Stemmer stemmer = new EnglishStemmer();
+            IStemmer stemmer = new EnglishStemmer();
 
             // Test the stemmer
             for (int i = 0; i < words.Length; i++)

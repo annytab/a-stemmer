@@ -7,7 +7,7 @@ namespace TestProgram
     public class TestDutchStemmer
     {
         [TestMethod]
-        public void ExtensiveTest()
+        public void ExtensiveTestDutchStemmer()
         {
             // Create an array with words to test
             string[] words = new string[] { "a", "á", "à", "aa", "aachen", "aachener", "aah", "aalborg", "aalders", "aalmoezen", "aalscholver", "aalscholvers", 
@@ -10939,7 +10939,7 @@ namespace TestProgram
                 "zwoet", "zwol", "zwoll", "zwoll", "zwol", "zwom" };
 
             // Create a dutch stemmer
-            Stemmer stemmer = new DutchStemmer();
+            IStemmer stemmer = new DutchStemmer();
 
             // Test the stemmer
             for (int i = 0; i < words.Length; i++)

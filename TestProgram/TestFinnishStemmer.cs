@@ -7,7 +7,7 @@ namespace TestProgram
     public class TestFinnishStemmer
     {
         [TestMethod]
-        public void ExtensiveTest()
+        public void ExtensiveTestFinnishStemmer()
         {
             // Create an array with words to test
             string[] words = new string[] { "aa", "aaa", "aachenin", "aachenista", "aadolf", "aadolfin", "aage", "aagot", "aah", "aake", "aakkoset", "aakkosia", 
@@ -11471,7 +11471,7 @@ namespace TestProgram
                 "irakilais", "irakilais", "irakilais" };
 
             // Create a finnish stemmer
-            Stemmer stemmer = new FinnishStemmer();
+            IStemmer stemmer = new FinnishStemmer();
 
             // Test the stemmer
             for (int i = 0; i < words.Length; i++)

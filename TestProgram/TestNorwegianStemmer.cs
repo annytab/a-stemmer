@@ -7,7 +7,7 @@ namespace TestProgram
     public class TestNorwegianStemmer
     {
         [TestMethod]
-        public void ExtensiveTest()
+        public void ExtensiveTestNorwegianStemmer()
         {
             // Create an array with words to test
             string[] words = new string[] { "a", "aabakken", "aabakkens", "aarbakke", "aarum", "aase", "ab", "abitanti", "abitazione", "ablegøyer", "absolutt", 
@@ -4781,7 +4781,7 @@ namespace TestProgram
                 "øystein" };
 
             // Create a norwegian stemmer
-            Stemmer stemmer = new NorwegianStemmer();
+            IStemmer stemmer = new NorwegianStemmer();
 
             // Test the stemmer
             for (int i = 0; i < words.Length; i++)

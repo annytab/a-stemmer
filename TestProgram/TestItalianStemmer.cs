@@ -7,7 +7,7 @@ namespace TestProgram
     public class TestItalianStemmer
     {
         [TestMethod]
-        public void ExtensiveTest()
+        public void ExtensiveTestItalianStemmer()
         {
             // Create an array with words to test
             string[] words = new string[] { "a", "à", "aa", "aalst", "ab", "abakoumova", "abano", "abate", "abati", "abbacinare", "abbacinati", "abbadia", 
@@ -6947,7 +6947,7 @@ namespace TestProgram
                 "zuccher", "zuccherin", "zuccher", "zucc", "zuccon", "zuff", "zurig", "zwe", "zwerver", "zwickel" };
 
             // Create an italian stemmer
-            Stemmer stemmer = new ItalianStemmer();
+            IStemmer stemmer = new ItalianStemmer();
 
             // Test the stemmer
             for (int i = 0; i < words.Length; i++)

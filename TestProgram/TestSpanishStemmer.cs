@@ -7,7 +7,7 @@ namespace TestProgram
     public class TestSpanishStemmer
     {
         [TestMethod]
-        public void ExtensiveTest()
+        public void ExtensiveTestSpanishStemmer()
         {
             // Create an array with words to test
             string[] words = new string[] { "a", "aarón", "abaco", "ABAJO", "Abandera", "abandONa", "abandonada", "abandonadas", "abandonado", "abandonados", 
@@ -5543,7 +5543,7 @@ namespace TestProgram
                 "zurd", "zurd", "zurit", "zutan" };
 
             // Create a spanish stemmer
-            Stemmer stemmer = new SpanishStemmer();
+            IStemmer stemmer = new SpanishStemmer();
 
             // Test the stemmer
             for (int i = 0; i < words.Length; i++)

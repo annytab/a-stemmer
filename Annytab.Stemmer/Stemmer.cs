@@ -5,7 +5,7 @@ namespace Annytab.Stemmer
     /// <summary>
     /// This is the base class for a stemmer
     /// </summary>
-    public abstract class Stemmer
+    public abstract class Stemmer : IStemmer
     {
         #region Variables
 

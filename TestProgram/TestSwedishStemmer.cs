@@ -7,7 +7,7 @@ namespace TestProgram
     public class TestSwedishStemmer
     {
         [TestMethod]
-        public void ExtensiveTest()
+        public void ExtensiveTestSwedishStemmer()
         {
             // Create an array with words to test
             string[] words = new string[] { "a", "aaele", "aah", "ab", "abba", "abborrar", "abborrarna", "abborre", "abborrpinne", "abc", "abednego", "abort", 
@@ -5951,7 +5951,7 @@ namespace TestProgram
                 "övr", "övr", "öänd" };
 
             // Create a swedish stemmer
-            Stemmer stemmer = new SwedishStemmer();
+            IStemmer stemmer = new SwedishStemmer();
 
             // Test the stemmer
             for (int i = 0; i < words.Length; i++)
