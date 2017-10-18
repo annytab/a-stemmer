@@ -1,22 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.2.2</Version>
+    <Version>1.2.3</Version>
     <Authors>Fredrik Stigsson</Authors>
     <Company>A Name Not Yet Taken AB</Company>
     <Description>Stemmers for 12 languages and one default stemmer. The default stemmer (DefaultStemmer) can be used for languages that not are supported. The default stemmer does not do any stemming at all.
 
 Supported languages: Danish, Dutch, English, Finnish, French, German, Italian, Norwegian, Portuguese, Romanian, Spanish and Swedish.</Description>
-    <PackageIconUrl>http://www.annytab.com/Content/images/user_design/annytab_logo_512x512.png</PackageIconUrl>
+    <PackageIconUrl>http://www.annytab.com/annytab_logo_512x512.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/annytab/a-stemmer</PackageProjectUrl>
     <Copyright>Copyright © 2014</Copyright>
-    <PackageReleaseNotes>This version adds support to .Net Core 1.0 by targeting the .Net Standard 1.4. The namespace has changed from just Annytab to Annytab.Stemmer.</PackageReleaseNotes>
+    <PackageReleaseNotes>This version adds support to .Net Core 2.0 by targeting the .Net Standard 2.0.</PackageReleaseNotes>
     <PackageTags>ASP.NET, .NET Core, C#, Snowball, Stemmer</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>1.2.2.0</AssemblyVersion>
-    <FileVersion>1.2.2.0</FileVersion>
+    <AssemblyVersion>1.2.3.0</AssemblyVersion>
+    <FileVersion>1.2.3.0</FileVersion>
     <Product>a-stemmer</Product>
   </PropertyGroup>
 
