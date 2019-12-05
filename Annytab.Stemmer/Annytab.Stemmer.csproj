@@ -3,21 +3,30 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.2.3</Version>
+    <Version>1.2.4</Version>
     <Authors>Fredrik Stigsson</Authors>
     <Company>A Name Not Yet Taken AB</Company>
     <Description>Stemmers for 12 languages and one default stemmer. The default stemmer (DefaultStemmer) can be used for languages that not are supported. The default stemmer does not do any stemming at all.
 
 Supported languages: Danish, Dutch, English, Finnish, French, German, Italian, Norwegian, Portuguese, Romanian, Spanish and Swedish.</Description>
-    <PackageIconUrl>http://www.annytab.com/annytab_logo_512x512.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/annytab/a-stemmer</PackageProjectUrl>
     <Copyright>Copyright © 2014</Copyright>
-    <PackageReleaseNotes>This version adds support to .Net Core 2.0 by targeting the .Net Standard 2.0.</PackageReleaseNotes>
+    <PackageReleaseNotes>Changed license to MIT.</PackageReleaseNotes>
     <PackageTags>ASP.NET, .NET Core, C#, Snowball, Stemmer</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>1.2.3.0</AssemblyVersion>
-    <FileVersion>1.2.3.0</FileVersion>
+    <AssemblyVersion>1.2.4.0</AssemblyVersion>
+    <FileVersion>1.2.4.0</FileVersion>
     <Product>a-stemmer</Product>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
 
 </Project>
